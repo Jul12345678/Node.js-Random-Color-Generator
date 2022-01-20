@@ -1,11 +1,19 @@
-import color from 'randomcolor';
+import chalk from 'chalk';
+import randomColor from 'randomcolor';
 
-// argv[2]
-let hueValue = process.argv[2];
-let luminosityValue = process.argv[3];
-
-var randomColor = color({
-  hue: hueValue,
-  luminosity: luminosityValue,
+const color = randomColor({
+  hue: process.argv[2],
+  luminosity: process.argv[3],
 });
-console.log(randomColor);
+
+console.log(
+  chalk.hex(color).bold(`###############################
+###############################
+###############################
+#####                     #####
+#####        ${color}      #####
+#####                     #####
+###############################
+###############################
+###############################`),
+);
