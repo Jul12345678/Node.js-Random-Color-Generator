@@ -39,5 +39,8 @@
   "dependencies": {
     "chalk": "^5.0.0",
     "randomcolor": "^0.6.2"
+  },
+  "scripts": {
+    "start": "node index.js"
   }
 }
